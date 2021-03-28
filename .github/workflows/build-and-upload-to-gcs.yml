@@ -43,5 +43,5 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@v0.2.0
         with:
           credentials: ${{ secrets.gcp_credentials }}
-          path: output/*
-          destination: browerio/
+          path: output/.
+          destination: browerio/.
