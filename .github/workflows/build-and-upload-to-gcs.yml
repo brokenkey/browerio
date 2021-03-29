@@ -36,7 +36,7 @@ jobs:
         run: make html
           
       - name: Setup gcloud
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud
         with: 
           service_account_key: ${{ secrets.gcp_credentials }}
           project_id: ${{ secrets.project }}
@@ -44,4 +44,4 @@ jobs:
 
       - name: Upload to gcloud storage bucket
         run: |-
-          gsutil -m rsync -R output/* gs://${{ secrets.bucket }}
+          gsutil -m rsync -r -d output/ gs://${{ secrets.bucket }}
