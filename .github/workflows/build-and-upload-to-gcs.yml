@@ -35,11 +35,13 @@ jobs:
       - name: Build using pelican
         run: make html
           
-      - name: Cloud Storage Uploader
-        # You may pin to the exact commit or the version.
-        # uses: google-github-actions/upload-cloud-storage@c43ab88dab05a52b87417245e108fa54204a652f
-        uses: google-github-actions/upload-cloud-storage@v0.2.0
-        with:
-          credentials: ${{ secrets.gcp_credentials }}
-          path: output/
-          destination: browerio
+      - name: Setup gcloud
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with: 
+          service_account_key: ${{ secrets.gcp_credentials }}
+          project_id: ${{ secrets.project }}
+          export_default_credentials: true
+
+      - name: Upload to gcloud storage bucket
+        run: |-
+          gsutil -m rsync -R output/* gs://${{ secrets.bucket }}
