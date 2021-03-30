@@ -107,3 +107,4 @@ Here's some more resources to learn more about Dockerfiles and Docker:
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 * [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
+You can download the files from this tutorial on (GitHub)[https://github.com/brokenkey/my-first-dockerfile].
