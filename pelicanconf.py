@@ -13,12 +13,12 @@ DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%Y-%M-%D'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = /feed.xml
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-GITHUB_URL = 'https://github.com/brokenkey'
+GITHUB_URL = 'https://github.com/brokenkey/browerio'
 
 
 # Social widget
