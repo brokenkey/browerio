@@ -101,7 +101,7 @@ An estimated 50% of today's cat owners never take their cats to a veterinarian f
 
 There we go. We've learned the basics of writing a Dockerfile and we've learned something about cats.
 
-Here's some more resources to learn more about Dockerfiles and Docker:
+Here are some more resources to learn more about Dockerfiles and Docker:
 
 * [Install Docker](https://docs.docker.com/get-docker/)
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
