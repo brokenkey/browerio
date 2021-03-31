@@ -33,7 +33,7 @@ We'll often need to install dependencies or update our container when we build i
 :::Dockerfile
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt install python3-pip \
+    && apt install -y python3-pip \
     && pip3 install requests
 ```
 
